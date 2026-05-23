@@ -8,6 +8,13 @@
         text-decoration: none;    /* optional: removes the default underline */
         color: #FF5733;           /* optional: matches text color to the box */
       }
+      .a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* Centers the element first (-50%), then shifts it 40px to the right (+40px) */
+        transform: translate(calc(-50% + 40px), -50%);
+      }
     </style>
   </head>
 
