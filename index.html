@@ -101,6 +101,62 @@
         .footer_class{
         }
 
+        .gif-container-elec {
+            height: 35px;
+            background-image: url('bolt.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: auto 35px;
+            background-position: left center;
+            margin-bottom: 3px;
+            }
+
+        .gif-container-elec:hover {
+            background-image: url('bolt.gif');
+        }
+
+        .gif-container-phy {
+            height: 27px;
+            background-image: url('atom.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: auto 27px;
+            background-position: left center;
+            margin-bottom: 11px;
+            }
+
+        .gif-container-phy:hover {
+            background-image: url('atom.gif');
+        }
+
+        .gif-container-math {
+            height: 38px;
+            background-image: url('integral.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: auto 38px;
+            background-position: left center;
+            margin-bottom: 0px;
+            }
+
+        .gif-container-math:hover {
+            background-image: url('integral.gif');
+        }
+
+        .gif-container-misc {
+            height: 33px;
+            background-image: url('music.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: auto 33px;
+            background-position: left center;
+            margin-bottom: 5px;
+            }
+
+        .gif-container-misc:hover {
+            background-image: url('music.gif');
+        }
+
         /* Use a media query to add a breakpoint at 800px: */
         @media screen and (max-width: 600px) {
             body {
@@ -212,7 +268,7 @@
     </p>
 
     <div class="menu">
-        <p class="subject">Electrical Engineering</p>
+        <div class="gif-container-elec"><p class="subject" style="padding-left: 40px;">Electrical Engineering</p></div>
         
         <button class="collapsible">Power Engineering</button>
         <div class="content">
@@ -271,7 +327,7 @@
     </div>
 
     <div class="menu">
-        <p class="subject">Physics</p>
+        <div class="gif-container-phy"><p class="subject" style="padding-left: 40px;">Physics</p></div>
         
         <button class="collapsible">Classical Mechanics</button>
         <div class="content">
@@ -296,7 +352,7 @@
     </div>
 
     <div class="menu">
-        <p class="subject">Mathematics</p>
+        <div class="gif-container-math"><p class="subject" style="padding-left: 38px;">Mathematics</p></div>
         
         <button class="collapsible">Calculus</button>
         <div class="content"><ul>
@@ -320,7 +376,7 @@
     </div>
 
     <div class="menu">
-        <p class="subject">Miscellaneous</p>
+        <div class="gif-container-misc"><p class="subject" style="padding-left: 35px;">Miscellaneous</p></div>
         
         <button class="collapsible">Physical Ponderings</button>
         <div class="content">
@@ -370,6 +426,10 @@
     </div>
 
     <footer class="footer_class">
+        <div style="display: none;"><img src="bolt.gif"></div>
+        <div style="display: none;"><img src="atom.gif"></div>
+        <div style="display: none;"><img src="integral.gif"></div>
+        <div style="display: none;"><img src="music.gif"></div>
         <p style="margin-top: 90px; margin-bottom: 0px;">Manan Garg</p>
         <p style="font-size: 4px; margin-top: 0px;">dogsarecoolbutcatsrule</p>
     </footer>    
