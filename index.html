@@ -93,23 +93,28 @@
             font-size: 18px;
         }
 
+        .welcome {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
         /* Use a media query to add a breakpoint at 800px: */
         @media screen and (max-width: 600px) {
             body {
-                background-image: url(bg.jpg);
+                background-image: url(mobile_bg.jpg);
                 background-size: 100% auto;
                 background-position: top center;
                 background-repeat: no-repeat;
                 background-attachment: scroll;
                 position: relative;
-                top: 80px;
+                top: 18vw;
             }
 
             h1 {
                 font-family: 'Playwrite GB S Guides', cursive;
                 font-weight: 400;
                 font-style: normal;
-                font-size: 6vw;
+                font-size: 10vw;
                 text-align: center;
             }
 
@@ -171,13 +176,19 @@
                 margin: 0 auto;
                 margin-top: 0.25vw;
                 position: relative;
-                top: 5vw
+                top: 35vw
             }
 
             .link_desc {
                 margin-top: 8px;
                 margin-bottom: 15px;
                 font-size: 5vw;
+            }
+          
+            .welcome {
+                text-align: center;
+                margin-bottom: 3vw;
+                top: 35vw;
             }
         }
 
@@ -187,7 +198,7 @@
   <body>
 
     <h1>Manan's Library</h1>
-    <p style="text-align: center; margin-bottom: 15px;">
+    <p class="Welcome">
       Hey there! Welcome to my nerd dump!<br>I hope you find something here that piques your interest!
     </p>
 
