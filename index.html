@@ -157,6 +157,70 @@
             background-image: url('media/icon/music.gif');
         }
 
+        .gif-container-einstein {
+            height: 8vw;
+            width: 8vw;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: 8vw 8vw;
+            background-position: left center;
+            margin-bottom: 0px;
+            position: absolute;
+            top: 15vw;
+            left: 4vw;
+            cursor: pointer;
+        }
+
+        .gif-container-teddy {
+            height: 6vw;
+            width: 6vw;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: 6vw 6vw;
+            background-position: left center;
+            margin-bottom: 0px;
+            position: absolute;
+            top: 15vw;
+            left: 78vw;
+            cursor: pointer;
+        }
+
+        .gif-container-poof1 {
+            height: 16vw;
+            width: 16vw;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: 16vw 16vw;
+            background-position: left center;
+            margin-bottom: 0px;
+            position: absolute;
+            top: 11vw;
+            left: 0vw;
+        }
+
+        .gif-container-poof2 {
+            height: 16vw;
+            width: 16vw;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: 16vw 16vw;
+            background-position: left center;
+            margin-bottom: 0px;
+            position: absolute;
+            top: 11vw;
+            left: 73vw;
+        }
+
+        .my_button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            height: 10vw;
+            width: 17vw;
+            position: absolute;
+            z-index: 1000;
+        }
+
         /* Use a media query to add a breakpoint at 800px: */
         @media screen and (max-width: 600px) {
             body {
@@ -318,6 +382,14 @@
   </head>
 
   <body>
+
+    <button onclick="myFunction1()" class="my_button" style="top: 18vw; left: 0vw;"></button>
+    <div class="gif-container-einstein"></div>
+    <div class="gif-container-poof1"></div>
+
+    <button onclick="myFunction2()" class="my_button" style="top: 17vw; left: 80vw;"></button>
+    <div class="gif-container-teddy"></div>
+    <div class="gif-container-poof2"></div>
 
     <h1>Manan's Library</h1>
     <p class="welcome">
@@ -505,5 +577,30 @@
                 }
             });
         }
+
+        function myFunction1() {
+            var einstein = document.querySelector('.gif-container-einstein');
+            var poof = document.querySelector('.gif-container-poof1');
+            
+            einstein.style.backgroundImage = "url('media/icon/einstein.png')";
+            poof.style.backgroundImage = "url('media/icon/poof.gif')";
+            
+            setTimeout(function() {
+                poof.style.display = 'none';
+            }, 1000); // Change back after 1 second (1000 milliseconds)
+        }
+
+        function myFunction2() {
+            var einstein = document.querySelector('.gif-container-teddy');
+            var poof = document.querySelector('.gif-container-poof2');
+            
+            einstein.style.backgroundImage = "url('media/icon/teddy.gif')";
+            poof.style.backgroundImage = "url('media/icon/poof.gif')";
+            
+            setTimeout(function() {
+                poof.style.display = 'none';
+            }, 1000); // Change back after 1 second (1000 milliseconds)
+        }
+      
     </script>
 </html>
