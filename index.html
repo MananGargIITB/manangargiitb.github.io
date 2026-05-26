@@ -171,6 +171,19 @@
             cursor: pointer;
         }
 
+        .gif-container-poof1 {
+            height: 16vw;
+            width: 16vw;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: 16vw 16vw;
+            background-position: left center;
+            margin-bottom: 0px;
+            position: absolute;
+            top: 11vw;
+            left: 0vw;
+        }
+
         /* Use a media query to add a breakpoint at 800px: */
         @media screen and (max-width: 600px) {
             body {
@@ -345,6 +358,7 @@
             z-index: 1000;">
     </button>
     <div class="gif-container-einstein"></div>
+    <div class="gif-container-poof1"></div>
 
     <h1>Manan's Library</h1>
     <p class="welcome">
@@ -535,20 +549,20 @@
 
         function myFunction1() {
             var einstein = document.querySelector('.gif-container-einstein');
-            // var poof = document.querySelector('.gif-container-poof1');
+            var poof = document.querySelector('.gif-container-poof1');
 
-            // poof.style.display = 'block'; // Show the poof gif
-            // einstein.style.display = 'block'; // Show the Einstein gif
+            poof.style.display = 'block'; // Show the poof gif
+            einstein.style.display = 'block'; // Show the Einstein gif
             
             einstein.style.backgroundImage = "url('media/icon/einstein.png')";
-            // poof.style.backgroundImage = 'url("media/icon/poof.gif?t=' + new Date().getTime() + '")';
+            poof.style.backgroundImage = 'url("media/icon/poof.gif?t=' + new Date().getTime() + '")';
             
-            // setTimeout(function() {
-            //     poof.style.display = 'none';
-            // }, 1000); // Change back after 1 second (1000 milliseconds)
-            // setTimeout(function() {
-            //     einstein.style.display = 'none';
-            // }, 3000); // Change back after 3 seconds (3000 milliseconds)
+            setTimeout(function() {
+                poof.style.display = 'none';
+            }, 1000); // Change back after 1 second (1000 milliseconds)
+            setTimeout(function() {
+                einstein.style.display = 'none';
+            }, 3000); // Change back after 3 seconds (3000 milliseconds)
         }
     </script>
 </html>
