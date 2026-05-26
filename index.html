@@ -184,6 +184,33 @@
             left: 0vw;
         }
 
+        .gif-container-teddy {
+            height: 6vw;
+            width: 6vw;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: 6vw 6vw;
+            background-position: left center;
+            margin-bottom: 0px;
+            position: absolute;
+            top: 15vw;
+            left: 78vw;
+            cursor: pointer;
+        }
+
+        .gif-container-poof2 {
+            height: 16vw;
+            width: 16vw;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: 16vw 16vw;
+            background-position: left center;
+            margin-bottom: 0px;
+            position: absolute;
+            top: 11vw;
+            left: 73vw;
+        }
+
         /* Use a media query to add a breakpoint at 800px: */
         @media screen and (max-width: 600px) {
             body {
@@ -359,6 +386,20 @@
     </button>
     <div class="gif-container-einstein"></div>
     <div class="gif-container-poof1"></div>
+
+    <button onClick="myFunction2()" style="
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            height: 10vw;
+            width: 17vw;
+            position: absolute;
+            top: 17vw;
+            left: 80vw;
+            z-index: 1000;">
+    </button>
+    <div class="gif-container-teddy"></div>
+    <div class="gif-container-poof2"></div>
 
     <h1>Manan's Library</h1>
     <p class="welcome">
@@ -552,11 +593,12 @@
             var poof = document.querySelector('.gif-container-poof1');
 
             poof.style.display = 'block'; // Show the poof gif
-            einstein.style.display = 'block'; // Show the Einstein gif
-            
-            einstein.style.backgroundImage = "url('media/icon/einstein.png')";
             poof.style.backgroundImage = 'url("media/icon/poof.gif?t=' + new Date().getTime() + '")';
-            
+
+            setTimeout(function() {
+                einstein.style.display = 'block'; // Show the Einstein gif
+                einstein.style.backgroundImage = "url('media/icon/einstein.png')";
+            }, 70);
             setTimeout(function() {
                 poof.style.display = 'none';
             }, 1000); // Change back after 1 second (1000 milliseconds)
@@ -564,5 +606,26 @@
                 einstein.style.display = 'none';
             }, 3000); // Change back after 3 seconds (3000 milliseconds)
         }
+
+        function myFunction2() {
+            var teddy = document.querySelector('.gif-container-teddy');
+            var poof = document.querySelector('.gif-container-poof2');
+
+            poof.style.display = 'block'; // Show the poof gif
+            poof.style.backgroundImage = 'url("media/icon/poof.gif?t=' + new Date().getTime() + '")';
+
+            setTimeout(function() {
+                teddy.style.display = 'block'; // Show the Teddy gif
+                teddy.style.backgroundImage = "url('media/icon/teddy.gif')";
+            }, 70);
+            setTimeout(function() {
+                poof.style.display = 'none';
+            }, 1000); // Change back after 1 second (1000 milliseconds)
+
+            setTimeout(function() {
+                teddy.style.display = 'none';
+            }, 3000); // Change back after 3 seconds (3000 milliseconds)
+        }
+      
     </script>
 </html>
