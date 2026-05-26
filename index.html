@@ -157,6 +157,20 @@
             background-image: url('media/icon/music.gif');
         }
 
+        .gif-container-einstein {
+            height: 8vw;
+            width: 8vw;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: 8vw 8vw;
+            background-position: left center;
+            margin-bottom: 0px;
+            position: absolute;
+            top: 15vw;
+            left: 4vw;
+            cursor: pointer;
+        }
+
         /* Use a media query to add a breakpoint at 800px: */
         @media screen and (max-width: 600px) {
             body {
@@ -319,7 +333,7 @@
 
   <body>
 
-    <button style="
+    <button onClick="myFunction1()" style="
             background-color: transparent;
             border: none;
             cursor: pointer;
@@ -330,6 +344,7 @@
             left: 0vw;
             z-index: 1000;">
     </button>
+    <div class="gif-container-einstein"></div>
 
     <h1>Manan's Library</h1>
     <p class="welcome">
@@ -516,6 +531,24 @@
                 content.style.maxHeight = content.scrollHeight + "px";
                 }
             });
+        }
+
+        function myFunction1() {
+            var einstein = document.querySelector('.gif-container-einstein');
+            // var poof = document.querySelector('.gif-container-poof1');
+
+            // poof.style.display = 'block'; // Show the poof gif
+            // einstein.style.display = 'block'; // Show the Einstein gif
+            
+            einstein.style.backgroundImage = "url('media/icon/einstein.png')";
+            // poof.style.backgroundImage = 'url("media/icon/poof.gif?t=' + new Date().getTime() + '")';
+            
+            // setTimeout(function() {
+            //     poof.style.display = 'none';
+            // }, 1000); // Change back after 1 second (1000 milliseconds)
+            // setTimeout(function() {
+            //     einstein.style.display = 'none';
+            // }, 3000); // Change back after 3 seconds (3000 milliseconds)
         }
     </script>
 </html>
